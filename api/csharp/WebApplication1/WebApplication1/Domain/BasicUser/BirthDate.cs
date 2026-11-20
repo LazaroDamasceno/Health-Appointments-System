@@ -1,10 +1,12 @@
 using WebApplication1.Domain.Exceptions;
 
-namespace WebApplication1.Domain;
+namespace WebApplication1.Domain.BasicUser;
 
 public partial record BirthDate
 {
     public DateOnly Value { get; init; }
+    
+    private BirthDate() { }
 
     public BirthDate(DateOnly birthDate)
     {

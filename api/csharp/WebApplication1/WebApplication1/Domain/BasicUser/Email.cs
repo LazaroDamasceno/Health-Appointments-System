@@ -1,12 +1,14 @@
 using System.Text.RegularExpressions;
 using WebApplication1.Domain.Exceptions;
 
-namespace WebApplication1.Domain;
+namespace WebApplication1.Domain.BasicUser;
 
 public partial class Email
 {
 
     private string Value { get; init; } = null!;
+
+    private Email() { }
 
     public Email(string email)
     {

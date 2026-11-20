@@ -1,7 +1,7 @@
 using System.Text.RegularExpressions;
 using WebApplication1.Domain.Exceptions;
 
-namespace WebApplication1.Domain;
+namespace WebApplication1.Domain.BasicUser;
 
 public partial record Address
 {
@@ -9,6 +9,8 @@ public partial record Address
     private string AddressLine { get; init; } = null!;
     private string City { get; init; } = null!;
     private string PostCode { get; init; } = null!;
+
+    private Address() { }
 
     public Address(string AddressLine, string City, string PostCode)
     {

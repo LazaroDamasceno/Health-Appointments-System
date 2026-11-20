@@ -1,6 +1,6 @@
 using WebApplication1.Domain.Exceptions;
 
-namespace WebApplication1.Domain;
+namespace WebApplication1.Domain.BasicUser;
 
 public record FullName
 {
