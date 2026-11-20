@@ -21,7 +21,7 @@ public partial record Address
         if (string.IsNullOrWhiteSpace(PostCode))
             throw new RequiredDataException("Post code is required.");
 
-        if (PostCodeRegex().IsMatch(PostCode))
+        if (!PostCodeRegex().IsMatch(PostCode))
             throw new InvalidFormatException("Post code is invalid.");
     }
 

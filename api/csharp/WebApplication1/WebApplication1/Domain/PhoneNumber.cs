@@ -19,6 +19,8 @@ public partial record PhoneNumber
 
         if (!PhoneNumberRegex().IsMatch(valueCleaned))
             throw new InvalidFormatException("Invalid UK phone number format.");
+        
+        Value = valueCleaned;
     }
 
     [GeneratedRegex("\\[0-9]{11}")] 
