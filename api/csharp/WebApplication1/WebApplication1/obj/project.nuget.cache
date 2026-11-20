@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "vHrJCw6B2yU=",
+  "success": true,
+  "projectFilePath": "/home/lazaro-damasceno/Git/Health-Appointments-System/api/csharp/WebApplication1/WebApplication1/WebApplication1.csproj",
+  "expectedPackageFiles": [
+    "/home/lazaro-damasceno/.nuget/packages/microsoft.aspnetcore.openapi/11.0.0/microsoft.aspnetcore.openapi.11.0.0.nupkg.sha512",
+    "/home/lazaro-damasceno/.nuget/packages/microsoft.openapi/3.11.0/microsoft.openapi.3.11.0.nupkg.sha512"
+  ],
+  "logs": []
+}
