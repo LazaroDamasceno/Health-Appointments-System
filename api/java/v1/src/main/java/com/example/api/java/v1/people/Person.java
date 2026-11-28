@@ -83,7 +83,7 @@ public class Person {
         );
     }
 
-    public Person toDomain(PersonEntity entity) {
+    public static Person toDomain(PersonEntity entity) {
         return new Person(
                 entity.getId(),
                 new FullName(
@@ -93,7 +93,7 @@ public class Person {
                 ),
                 new Identifier(entity.getIdentifier()),
                 new Email(entity.getEmail()),
-                Gender.fromValue(entity.getEmail()),
+                Gender.fromValue(entity.getGender()),
                 new PhoneNumber(entity.getPhoneNumber()),
                 entity.getCreatedAt()
         );

@@ -10,17 +10,23 @@ import java.util.UUID
 data class PersonEntity(
     @Id
     val id: UUID,
+
     @Column("first_name")
     val firstName: String,
+
     @Column("middle_name")
     val middleName: String?,
+
     @Column("last_name")
     val lastName: String,
+
     val identifier: String,
     val email: String,
     val gender: String,
+
     @Column("phone_number")
     val phoneNumber: String,
+
     @Column("created_at")
     val createdAt: Instant
 )
