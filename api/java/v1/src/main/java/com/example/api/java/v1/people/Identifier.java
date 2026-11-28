@@ -15,10 +15,11 @@ public record Identifier(String value) {
         );
 
         var valueNormalized = value.trim().toUpperCase();
-        if (!PATTERN.matcher(valueNormalized).matches()) {
-            var message = "Invalid identifier format: %s".formatted(valueNormalized);
-            throw new InvalidRegexException(message);
-        }
+        ValueObjectVerifier.UnmatchablePattern(
+                value,
+                PATTERN,
+                "Invalid identifier format" + valueNormalized
+        );
 
         value = valueNormalized;
     }

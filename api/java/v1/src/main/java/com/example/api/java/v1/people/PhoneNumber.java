@@ -15,10 +15,11 @@ public record PhoneNumber(String value) {
         );
 
         var valueTrimmed = value.trim();
-        if (!PATTERN.matcher(valueTrimmed).matches()) {
-            var message = "Invalid phone number format: %s".formatted(valueTrimmed);
-            throw new InvalidRegexException(message);
-        }
+        ValueObjectVerifier.UnmatchablePattern(
+                value,
+                PATTERN,
+                "Invalid phone number format" + valueNormalized
+        );
 
         value = valueTrimmed;
     }
