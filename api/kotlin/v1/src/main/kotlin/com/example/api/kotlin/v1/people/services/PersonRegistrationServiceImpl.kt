@@ -3,6 +3,7 @@ package com.example.api.kotlin.v1.people.services
 import com.example.api.kotlin.v1.global.DuplicatedInformationException
 import com.example.api.kotlin.v1.people.Person
 import com.example.api.kotlin.v1.people.PersonRegistrationRequest
+import com.example.api.kotlin.v1.people.PersonRegistrationService
 import com.example.api.kotlin.v1.people.repository.PersonRepository
 import jakarta.validation.Valid
 import org.springframework.stereotype.Service

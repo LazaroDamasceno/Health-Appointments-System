@@ -21,6 +21,8 @@ repositories {
 extra["springModulithVersion"] = "2.2.0-M1"
 
 dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-webflux")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.springframework.modulith:spring-modulith-core")
 	implementation("org.springframework.boot:spring-boot-h2console")
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
@@ -49,6 +51,7 @@ dependencies {
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test")
 	testImplementation("org.springframework.modulith:spring-modulith-starter-test")
+	testImplementation("org.springframework.boot:spring-boot-starter-webflux-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
