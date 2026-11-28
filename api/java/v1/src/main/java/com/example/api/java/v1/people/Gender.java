@@ -18,7 +18,7 @@ public enum Gender {
     }
 
     public static Gender fromValue(String value) {
-        ValueObjectVerifier.NullableOrBankStringValue(
+        ValueObjectVerifier.nullableOrBankStringValue(
                 value,
                 "Gender is required"
         );

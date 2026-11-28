@@ -8,13 +8,13 @@ public record PhoneNumber(String value) {
     private static final Pattern PATTERN = Pattern.compile("^\\d{11}$");
 
     public PhoneNumber {
-        ValueObjectVerifier.NullableOrBankStringValue(
+        ValueObjectVerifier.nullableOrBankStringValue(
                 value,
                 "Phone number is required"
         );
 
         var valueTrimmed = value.trim();
-        ValueObjectVerifier.UnmatchablePattern(
+        ValueObjectVerifier.unmatchablePattern(
                 value,
                 PATTERN,
                 "Invalid phone number format" + valueTrimmed

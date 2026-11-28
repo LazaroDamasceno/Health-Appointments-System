@@ -8,12 +8,12 @@ public record FullName(
         String lastName
 ) {
     public FullName {
-        ValueObjectVerifier.NullableOrBankStringValue(
+        ValueObjectVerifier.nullableOrBankStringValue(
                 firstName,
                 "First name is required"
         );
 
-        ValueObjectVerifier.NullableOrBankStringValue(
+        ValueObjectVerifier.nullableOrBankStringValue(
                 lastName,
                 "Last name is required"
         );
