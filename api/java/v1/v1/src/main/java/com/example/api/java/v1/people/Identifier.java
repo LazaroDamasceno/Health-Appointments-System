@@ -19,5 +19,7 @@ public record Identifier(String value) {
             var message = "Invalid identifier format: %s".formatted(valueNormalized);
             throw new InvalidRegexException(message);
         }
+
+        value = valueNormalized;
     }
 }
