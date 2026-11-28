@@ -24,8 +24,9 @@ public enum Gender {
         );
 
         var message = "Invalid Gender option: %s".formatted(value);
+        var valueTrimmed = value.trim();
         return Arrays.stream(values())
-                .filter(g -> g.name().equalsIgnoreCase(value))
+                .filter(g -> g.name().equalsIgnoreCase(valueTrimmed))
                 .findFirst()
                 .orElseThrow(() -> new InvalidOptionException(message));
     }
