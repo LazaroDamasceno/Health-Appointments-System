@@ -33,6 +33,24 @@ public class Person {
         this.createdAt = Instant.now();
     }
 
+    private Person(
+            UUID id,
+            FullName fullName,
+            Identifier identifier,
+            Email email,
+            Gender gender,
+            PhoneNumber phoneNumber,
+            Instant createdAt
+    ) {
+        this.id = id;
+        this.fullName = fullName;
+        this.identifier = identifier;
+        this.email = email;
+        this.gender = gender;
+        this.phoneNumber = phoneNumber;
+        this.createdAt = createdAt;
+    }
+
     public static Person from(
             String firstName,
             String middleName,
@@ -48,6 +66,36 @@ public class Person {
                 new Email(email),
                 Gender.fromValue(gender),
                 new PhoneNumber(phoneNumber)
+        );
+    }
+
+    public PersonEntity toEntity() {
+        return new PersonEntity(
+                id,
+                fullName.firstName(),
+                fullName.middleName(),
+                fullName.lastName(),
+                identifier.value(),
+                email.value(),
+                gender.getValue(),
+                phoneNumber.value(),
+                createdAt
+        );
+    }
+
+    public Person toDomain(PersonEntity entity) {
+        return new Person(
+                entity.getId(),
+                new FullName(
+                        entity.getFirstName(),
+                        entity.getMiddleName(),
+                        entity.getLastName()
+                ),
+                new Identifier(entity.getIdentifier()),
+                new Email(entity.getEmail()),
+                Gender.fromValue(entity.getEmail()),
+                new PhoneNumber(entity.getPhoneNumber()),
+                entity.getCreatedAt()
         );
     }
 }
