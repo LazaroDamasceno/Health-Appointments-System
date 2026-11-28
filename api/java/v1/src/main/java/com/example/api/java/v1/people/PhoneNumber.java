@@ -1,6 +1,5 @@
 package com.example.api.java.v1.people;
 
-import com.example.api.java.v1.global.InvalidRegexException;
 import com.example.api.java.v1.global.ValueObjectVerifier;
 
 import java.util.regex.Pattern;
@@ -18,7 +17,7 @@ public record PhoneNumber(String value) {
         ValueObjectVerifier.UnmatchablePattern(
                 value,
                 PATTERN,
-                "Invalid phone number format" + valueNormalized
+                "Invalid phone number format" + valueTrimmed
         );
 
         value = valueTrimmed;
