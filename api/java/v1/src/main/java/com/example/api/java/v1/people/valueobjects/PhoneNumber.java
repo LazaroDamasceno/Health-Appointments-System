@@ -5,6 +5,7 @@ import com.example.api.java.v1.global.ValueObjectVerifier;
 import java.util.regex.Pattern;
 
 public record PhoneNumber(String value) {
+
     private static final Pattern PATTERN = Pattern.compile("^\\d{11}$");
 
     public PhoneNumber {

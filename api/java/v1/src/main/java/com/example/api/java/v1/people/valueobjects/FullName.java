@@ -7,6 +7,7 @@ public record FullName(
         String middleName,
         String lastName
 ) {
+
     public FullName {
         ValueObjectVerifier.nullableOrBankStringValue(
                 firstName,

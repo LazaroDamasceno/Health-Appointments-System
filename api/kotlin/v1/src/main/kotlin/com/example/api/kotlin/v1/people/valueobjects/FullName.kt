@@ -9,6 +9,7 @@ data class FullName private constructor(
     val middleName: String?,
     val lastName: String,
 ) {
+
     companion object {
         operator fun invoke(
             firstName: String,

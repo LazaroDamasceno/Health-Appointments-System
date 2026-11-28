@@ -15,6 +15,7 @@ data class Person private constructor(
     val phoneNumber: PhoneNumber,
     val createdAt: Instant
 ) {
+
     companion object {
         fun from(
             firstName: String,

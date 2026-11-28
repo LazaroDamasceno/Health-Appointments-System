@@ -4,6 +4,7 @@ import com.example.api.kotlin.v1.global.ValueObjectVerifier
 
 @ConsistentCopyVisibility
 data class Identifier private constructor(val value: String) {
+
     companion object {
         private val REGEX = Regex("^[A-Z]\\d{6}[A-Z]{2}$")
 

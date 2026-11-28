@@ -14,8 +14,8 @@ class GlobalExceptionHandler {
         InvalidOptionException::class,
         InvalidRegexException::class
     )
-     suspend fun code400Exceptions(ex: RuntimeException): ProblemDetail {
-        val status = HttpStatus.BAD_REQUEST
+     suspend fun code422Exceptions(ex: RuntimeException): ProblemDetail {
+        val status = HttpStatus.UNPROCESSABLE_CONTENT
         val problemDetail = ProblemDetail.forStatusAndDetail(
             status,
             ex.message
