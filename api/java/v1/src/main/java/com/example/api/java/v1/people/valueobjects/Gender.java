@@ -1,4 +1,4 @@
-package com.example.api.java.v1.people;
+package com.example.api.java.v1.people.valueobjects;
 
 import com.example.api.java.v1.global.InvalidOptionException;
 import com.example.api.java.v1.global.ValueObjectVerifier;
