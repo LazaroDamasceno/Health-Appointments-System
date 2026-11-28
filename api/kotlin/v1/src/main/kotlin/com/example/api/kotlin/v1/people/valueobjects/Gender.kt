@@ -1,4 +1,4 @@
-package com.example.api.kotlin.v1.people
+package com.example.api.kotlin.v1.people.valueobjects
 
 import com.example.api.kotlin.v1.global.ValueObjectVerifier
 

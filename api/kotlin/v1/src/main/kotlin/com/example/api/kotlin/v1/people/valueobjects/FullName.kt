@@ -1,6 +1,5 @@
-package com.example.api.kotlin.v1.people
+package com.example.api.kotlin.v1.people.valueobjects
 
-import com.example.api.kotlin.v1.global.BlankValueException
 import com.example.api.kotlin.v1.global.ValueObjectVerifier
 
 
@@ -37,5 +36,12 @@ data class FullName private constructor(
                 lastNameTrimmed
             )
         }
+    }
+
+    fun getFormattedName(): String {
+        if (middleName.isNullOrBlank()) {
+            return "$firstName $lastName"
+        }
+        return "$firstName $middleName $lastName"
     }
 }
