@@ -5,7 +5,7 @@ import com.example.api.kotlin.v1.global.ValueObjectVerifier
 @ConsistentCopyVisibility
 data class PhoneNumber private constructor(val value: String) {
     companion object {
-        private val REGEX = Regex("^\\d{11}")
+        private val REGEX = Regex("^\\d{11}$")
 
         operator fun invoke(value: String): PhoneNumber {
             ValueObjectVerifier.blankValue(
