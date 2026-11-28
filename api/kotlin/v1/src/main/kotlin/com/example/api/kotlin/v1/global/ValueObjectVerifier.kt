@@ -1,10 +1,10 @@
 package com.example.api.kotlin.v1.global
 
-class ValueObjectValueVerifier {
+class ValueObjectVerifier {
     companion object {
-        fun nullableOrBlankValue(value: String?, message: String) {
-            if (value?.isBlank() == true) {
-                throw NullableOrBlankValueException(message)
+        fun blankValue(value: String, message: String) {
+            if (value.isBlank()) {
+                throw BlankValueException(message)
             }
         }
 
